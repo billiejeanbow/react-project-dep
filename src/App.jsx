@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <div>
-        <h1>Happy Monday Y'all</h1>
-        <h3>Let's deploy this react on Vercel</h3>
+        <h1>Happy Monday</h1>
+        <h3>I will deploy this react project on Vercel</h3>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
