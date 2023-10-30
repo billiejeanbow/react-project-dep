@@ -1,35 +1,64 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
+function FetchMeme() {
+  const [memeData, setMemeData] = useState(null);
+  const [memeIdInput, setMemeIdInput] = useState('');
+  const [searchedMemeId, setSearchedMemeId] = useState(null);
 
+  useEffect(() => {
+    async function fetchMeme() {
+      try {
+        const response = await fetch(`http://alpha-meme-maker.herokuapp.com/memes/:id`);
+        if (response.ok) {
+          const data = await response.json();
+          setMemeData(data.data);
+        } else {
+          console.error('Failed to fetch meme data');
+          setMemeData(null); 
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        setMemeData(null);
+      }
+    }
 
-function FetchMemes() {
-    const [memes, setMemes] = useState([]);
-    const apiUrl = 'https://api.imgflip.com/search_memes';
-  
-    useEffect(() => {
+    if (searchedMemeId !== null) {
+      fetchMeme();
+    }
+  }, [searchedMemeId]);
 
-      fetch(apiUrl)
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.success) {
-            setMemes(data.data.memes);
-          } 
-        })
-        .catch((error) => {
-          console.error('Error fetching memes:', error);
-        });
-    }, []);
-  
-    return (
+  const handleSearch = () => {
+    if (memeIdInput.trim() !== '') {
+      setSearchedMemeId(parseInt(memeIdInput, 10));
+    }
+  };
+
+  return (
+    <div>
       <div>
-        <h2>Your Meme of the day...</h2>
-        <ul>
-          {memes.map((meme) => (
-            <li key={meme.id}>{meme.name}</li>
-          ))}
-        </ul>
+        <input
+          type="text"
+          placeholder="Enter Meme ID"
+          value={memeIdInput}
+          onChange={(e) => setMemeIdInput(e.target.value)}
+        />
+        <button onClick={handleSearch}>Search Meme</button>
       </div>
-    );
-  }
-  
-  export default FetchMemes;
+
+      {memeData ? (
+        <div>
+          <h1>{memeData.name}</h1>
+          <img src={memeData.image} alt={memeData.name} />
+          <p>{memeData.detail}</p>
+          <p>{memeData.tags}</p>
+          <p>{memeData.topText}</p>
+          <p>{memeData.bottomText}</p>
+        </div>
+      ) : searchedMemeId ? (
+        <p>Loading meme data...</p>
+      ) : null}
+    </div>
+  );
+}
+
+export default FetchMeme;
