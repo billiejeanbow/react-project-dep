@@ -9,7 +9,8 @@ function UserLogin() {
     const handleLogin = () => {
       if (username && password) {
         setIsLoggedIn(true);
-      }
+      }else {
+        alert("Please enter both a username and a password.");}
     }
     return (
         <div className="login-main">
@@ -29,15 +30,14 @@ function UserLogin() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <br />
-            <Link to={isLoggedIn ? "/FetchMemes" : "#"}> {/* Conditionally set the link */}
+            <Link to={isLoggedIn ? "/Players" : "#"}> 
           <button onClick={handleLogin}>Login</button>
         </Link>
       </form>
 
       {isLoggedIn && (
         <p>
-          Login successful!{' '}
-          <Link to="./components/FetchMemes">Click here to access the latest memes</Link>
+          <Link to="./components/Players"></Link>
         </p>
       )}
     </div>
