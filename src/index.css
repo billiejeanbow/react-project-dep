@@ -1,14 +1,40 @@
 body {
   background-color: black;
-  font-family: 'Abril Fatface', serif;
+  font-family: "Varela Round", sans-serif;
 }
 
 h1 {
-  color:white;
+  color: white;
 }
 
 button {
-  font-family: 'Abril Fatface', serif;
+  font-family: "Varela Round", sans-serif;
+  font-size: 30px;
+  width: 150px;
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  border: 3px solid orange;
+  border-radius: 10px;
+  margin: 30px;
+  
+}
+button:hover {
+  background-color: white;
+  color: orange;
+  font-weight: bold;
 }
 
+input {
+  font-family: "Varela Round", sans-serif;
+  background-color: orange; 
+  padding: 7px;
+  border-radius: 5px;
+  margin: 10px;
+}
 
+::placeholder {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
