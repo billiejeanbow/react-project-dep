@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import UserLog from './components/UserLog';
 import PlayerStatsSearch from './components/Players';
-
+import Shop from './components/MemStore';
 
 
 import './App.css'
@@ -17,6 +17,7 @@ function App() {
     <Route path='*' element= {<HomePage />}/>
    <Route path='/login' element={<UserLog />}/>
    <Route path='/players' element={<PlayerStatsSearch />} />
+   <Route path='/membership' element={<Shop />} />
    </Routes>
    </BrowserRouter>
   )
