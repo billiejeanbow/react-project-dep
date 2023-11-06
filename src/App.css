@@ -6,7 +6,7 @@ body {
   overflow: hidden;
 }
 
-nav {
+/* nav {
  background-color: transparent;
   width: 100vw;
 }
@@ -21,6 +21,40 @@ nav li {
   font-size: 30px;
   display: inline;
   margin-left: 20px;
+}
+
+nav li:last-child {
+  margin-left: auto; }
+
+nav li a {
+  color: orange;
+  text-decoration: none;
+  padding-right: 60px;
+}
+
+nav li a:hover {
+  color: white;
+} */
+
+nav {
+  background-color: transparent;
+  width: 100vw;
+}
+
+nav ul {
+  list-style: none;
+  padding-top: 25px;
+  margin: 20px;
+  display: flex;
+  justify-content: space-between; 
+}
+
+nav li {
+  font-size: 30px;
+}
+
+nav li:last-child {
+  margin-left: auto;
 }
 
 nav li a {
@@ -90,7 +124,6 @@ nav li a:hover {
 .players-main input {
   padding: 7px;
   border-radius: 5px;
-  margin: 10px;
 }
 
 .players-main button {
@@ -113,16 +146,20 @@ nav li a:hover {
 }
 
 .player-info {
-  padding: 60px;
+  padding: 20px;
   color: white;
   border: 6px solid orange;
   border-radius: 5px;
-  margin: 50px;
+
 }
 
 .player-info h2 {
   font-size: 50px;
   text-decoration: underline;
+}
+
+.player-info button{
+  width:400px
 }
 
 .stats {
@@ -192,4 +229,27 @@ margin: 100px;
 
 .mem-info:hover{
   background-color: orange;
+}
+
+.saved-players h1{
+  font-size: 70px;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 10px;
+  width: 100vw;
+  padding-top: 150px;
+}
+
+
+.saved-player-list {
+  list-style-type: none;
+  padding-top: 250px;
+  height:300;
+  font-size: 20px;
+  color: white;
+  padding-left: 300px;
 }

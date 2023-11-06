@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -11,11 +11,14 @@ const NavBar = () => {
           <NavLink to="/players">Player Search</NavLink>
         </li>
         <li>
-            <NavLink to="/membership"> Become a Member</NavLink>
+          <NavLink to="/favorites">Your Favorite Players</NavLink>
+        </li>
+        <li>
+          <NavLink to="/membership"> GOTHOOPS Membership</NavLink>
         </li>
       </ul>
     </nav>
   );
-}
+};
 
 export default NavBar;

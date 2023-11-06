@@ -9,17 +9,6 @@ console.log(state)
   const handleSelectMembership = (tier) => {
     selectMembership(tier);
   };
-  switch (tiers) {
-    case 'rookie':
-      break;
-    case 'starter':
-      break;
-    case 'allstar':
-
-      break;
-    default:
-      break;
-  }
 
   return (
     <div className="mem-main">
