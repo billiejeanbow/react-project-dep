@@ -21,6 +21,7 @@ export const useMembership = () => {
   return useContext(MemStoreContext);
 }
 
+// eslint-disable-next-line react/prop-types
 export const MembershipProvider = ({ children }) => {
   const [state, dispatch] = useReducer(membershipReducer, initialState);
 
