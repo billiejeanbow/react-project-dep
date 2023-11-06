@@ -17,10 +17,10 @@ export const tiers = [
       price: 30,
       benefits: [
         'Advanced Stats',
-        'Full Games with Live Feeds',
-        'Access to NBA Picture Database',
-        'Special Member Deals on Merch',
-        'Cheaper Game Tickets',
+        'Full Games + Live Feeds',
+        'Access to NBAPD',
+        'Special Member Deals',
+        'Discounted Tickets',
       ],
     },
   ];
