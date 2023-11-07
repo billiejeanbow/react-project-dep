@@ -12,8 +12,8 @@ export const tiers = [
       benefits: ['Advanced Stats', 'Game Recaps', 'Live Photos'],
     },
     {
-      id: 'allstar',
-      name: 'All Star',
+      id: 'star',
+      name: 'Star',
       price: 30,
       benefits: [
         'Advanced Stats',
