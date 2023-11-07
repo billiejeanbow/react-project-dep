@@ -14,6 +14,10 @@ function SavedPlayers() {
     localStorage.setItem('savedPlayers', JSON.stringify(updatedPlayers));
   };
 
+//   if (savedPlayers.length === 0) {
+//     window.alert("No players saved. Please use the 'Player Search' to add your favourite");
+//   }
+
   return (
     <div className="saved-players">
       <h1>Saved Players</h1>

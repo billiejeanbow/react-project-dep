@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom"
 import { tiers } from "./MemTiers";
 import { MemStoreContext } from "./MemStoreContext";
 
@@ -6,8 +7,10 @@ import { MemStoreContext } from "./MemStoreContext";
 function Shop() {
   const { state, selectMembership } = useContext(MemStoreContext);
 console.log(state)
+
   const handleSelectMembership = (tier) => {
     selectMembership(tier);
+    history.push(`/${tier}`);
   };
 
   return (
@@ -16,13 +19,15 @@ console.log(state)
       {tiers.map((tier) => (
         <div className="mem-info" key={tier.id}>
           <h3>{tier.name}</h3>
-          <p>Price: ${tier.price}</p>
+          <p>Price: {tier.price}€</p>
           <ul>
             {tier.benefits.map((benefit) => (
               <li key={benefit}>{benefit}</li>
             ))}
           </ul>
-          <button onClick={() => handleSelectMembership(tier.id)}>Select</button>
+          <button onClick={() => handleSelectMembership(tier.id)}>
+           <Link className="select-bttn" to={`/${tier.name}`}>Select</Link>
+          </button>
         </div>
       ))}
     </div>

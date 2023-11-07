@@ -24,7 +24,6 @@ export const useMembership = () => {
 // eslint-disable-next-line react/prop-types
 export const MembershipProvider = ({ children }) => {
   const [state, dispatch] = useReducer(membershipReducer, initialState);
-console.log(state)
   const chooseMembership = (newMembership) => {
     dispatch({ type: CHOOSE_MEMBERSHIP, newMembership });
   };

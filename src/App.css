@@ -46,7 +46,7 @@ nav ul {
   padding-top: 25px;
   margin: 20px;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 nav li {
@@ -82,6 +82,8 @@ nav li a:hover {
 .home-main h1 {
   font-weight: bold;
   font-size: 110px;
+  color: orange;
+  text-shadow: 2px 7px 5px white;
 }
 
 .home-main h2 {
@@ -100,11 +102,9 @@ nav li a:hover {
 }
 
 .login-main h2 {
-  font-size: 70px;
+  font-size: 60px;
   color: white;
 }
-
-
 
 .players-main {
   position: fixed;
@@ -117,12 +117,11 @@ nav li a:hover {
 }
 
 .players-main h1 {
-  font-size: 70px;
+  font-size: 60px;
   text-align: center;
 }
 
 .players-main input {
-  padding: 7px;
   border-radius: 5px;
 }
 
@@ -132,9 +131,9 @@ nav li a:hover {
   align-items: center;
   width: 150px;
   padding: 10px;
-  background-color:transparent;
+  background-color: transparent;
   color: white;
-  border: 3px solid orange;
+  border: 5px solid orange;
   border-radius: 10px;
   margin: 30px;
 }
@@ -150,7 +149,6 @@ nav li a:hover {
   color: white;
   border: 6px solid orange;
   border-radius: 5px;
-
 }
 
 .player-info h2 {
@@ -158,8 +156,8 @@ nav li a:hover {
   text-decoration: underline;
 }
 
-.player-info button{
-  width:400px
+.player-info button {
+  width: 400px;
 }
 
 .stats {
@@ -167,21 +165,19 @@ nav li a:hover {
   font-size: 20px;
 }
 
-.mem-main{
+.mem-main {
   padding-top: 100px;
 }
 
-.mem-main h1{
-  font-size: 70px;
+.mem-main h1 {
+  font-size: 60px;
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 10px;
   width: 100vw;
- 
 }
 
 /* .mem-info{
@@ -211,28 +207,29 @@ ul{
   border: 3px solid orange;
   border-radius: 10px;
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   align-items: center;
-margin: 100px;
+  margin: 80px;
   width: 90vw;
 }
 
-.mem-info h3{
+.mem-info h3 {
   color: white;
   font-size: 40px;
 }
 
-.mem-info ul, p{
+.mem-info ul,
+p {
   font-size: 20px;
   color: white;
 }
 
-.mem-info:hover{
+.mem-info:hover {
   background-color: orange;
 }
 
-.saved-players h1{
-  font-size: 70px;
+.saved-players h1 {
+  font-size: 60px;
   position: fixed;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -244,12 +241,55 @@ margin: 100px;
   padding-top: 150px;
 }
 
-
 .saved-player-list {
   list-style-type: none;
-  padding-top: 250px;
-  height:300;
+  padding-top: 170px;
+  height: 300;
   font-size: 20px;
   color: white;
   padding-left: 300px;
+}
+
+.saved-player-list button {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: orange;
+  padding: 10px;
+  height: 40px;
+  text-align: center;
+}
+
+.footer-tabs {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.footer-tabs a + a {
+  margin-left: 20px;
+}
+
+.footer-copy {
+  font-size: 10px;
+}
+
+.select-bttn{
+  color: white;
+  text-decoration: none;
+}
+.select-bttn:hover{
+  color: orange;
+  text-decoration: none;
 }

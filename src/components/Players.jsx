@@ -60,7 +60,7 @@ function PlayerStatsSearch() {
       savedPlayers.push(playerStats);
       localStorage.setItem('savedPlayers', JSON.stringify(savedPlayers));
       console.log("Player information saved:", playerStats);
-      window.alert("Player information saved!");
+      window.alert("Saved to Your Favorite Players!");
     } else {
       window.alert("No player information to save.");
     }
