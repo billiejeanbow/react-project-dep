@@ -1,9 +1,12 @@
+import Rookie1 from "../images/Rookie.png"
+
 function Rookie() {
   return (
-    <div>
+    <div className="rookie-parent">
+    <div className="rookie-main">
       <h1>Rookie</h1>
       <p>
-        Rookie Membership Package: Price: 10€/month 
+        Rookie Membership Package: Price: 10€/month
         <br />
         <br />Welcome to our Rookie
         Membership Package, a fantastic choice for those who are just getting
@@ -23,6 +26,8 @@ function Rookie() {
         Get on the court with our Rookie Membership for just 10€ per month.
       </p>
     </div>
+        <img className="rookie-img" src={Rookie1} alt="Rookie Membership Trophy" />
+        </div>
   );
 }
 

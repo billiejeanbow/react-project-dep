@@ -1,6 +1,9 @@
+import Starter1 from "../images/Starter.png"
+
 function Starter() {
   return (
-    <div>
+    <div className="starter-parent">
+    <div className="starter-main">
       <h1>Starter</h1>
       <p>
         Starter Membership Package: Price: 20€/month 
@@ -8,7 +11,7 @@ function Starter() {
         <br />
         The Starter Membership
         Package is perfect for basketball enthusiasts who are ready to take
-        their passion to the next level. For just 20€ per month, you will enjoy
+        their passion to the next level.  You will enjoy
         all the benefits from the Rookie package and more:
         <br />
         <br />
@@ -24,6 +27,8 @@ function Starter() {
         <br />
         Elevate your basketball experience with our Starter Membership.
       </p>
+    </div>
+    <img className="starter-img" src={Starter1} alt="Starter Member Trophy" />
     </div>
   );
 }

@@ -9,8 +9,12 @@ import Footer from "./components/Footer";
 import Rookie from "./components/pages/Rookie";
 import Starter from "./components/pages/Starter";
 import Star from "./components/pages/Star";
+import LiveGame from "./components/pages/LiveGame";
+import About from "./components/pages/About";
+import EventCal from "./components/pages/Calendar";
 
 import "./App.css";
+
 
 function App() {
   return (
@@ -25,6 +29,9 @@ function App() {
         <Route path="/rookie" element={<Rookie />} />
         <Route path="/starter" element={<Starter />} />
         <Route path="/star" element={<Star />} />
+        <Route path="/livegame" element={<LiveGame />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/eventcal" element={<EventCal />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

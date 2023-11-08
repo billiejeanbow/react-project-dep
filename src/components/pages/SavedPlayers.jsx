@@ -25,7 +25,8 @@ function SavedPlayers() {
         {savedPlayers.map((player, index) => (
           <li key={index}>
             <h2>{player.first_name} {player.last_name}</h2>
-            <button onClick={() => deletePlayer(index)}>Delete</button>
+            <a className='player-link' href="https://www.nba.com/stats/player/2544" target="_blank">Player Profile</a>
+            <button onClick={() => deletePlayer(index)}>Delete Player</button>
           </li>
         ))}
       </ul>
