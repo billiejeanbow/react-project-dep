@@ -5,7 +5,7 @@ import UserLog from "./components/pages/UserLog";
 import PlayerStatsSearch from "./components/pages/Players";
 import Shop from "./components/pages/MemStore";
 import SavedPlayers from "./components/pages/SavedPlayers";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Rookie from "./components/pages/Rookie";
 import Starter from "./components/pages/Starter";
 import Star from "./components/pages/Star";
@@ -21,8 +21,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="*" element={<HomePage />} />
-        <Route path="/login" element={<UserLog />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="*" element={<UserLog />} />
         <Route path="/players" element={<PlayerStatsSearch />} />
         <Route path="/membership" element={<Shop />} />
         <Route path="/favorites" element={<SavedPlayers />} />
@@ -33,7 +33,7 @@ function App() {
         <Route path="/about" element={<About />}></Route>
         <Route path="/eventcal" element={<EventCal />}></Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

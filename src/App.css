@@ -1,5 +1,5 @@
 body {
-  background-image: url(https://cdn.dribbble.com/users/43762/screenshots/3540073/media/e406320d319015f8e661df5c37d8b656.gif);
+  background-image: url(https://im3.ezgif.com/tmp/ezgif-3-5dc259c868.gif);
   background-size: cover;
   width: 100vh;
   height: 100vh;
@@ -260,13 +260,12 @@ footer {
   background-color: #f0872d;
   padding: 10px;
   height: 60px;
-  text-align: center;
+  width: 100%;
 }
 
 .footer-tabs {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between
 }
 
 .footer-tabs ul li {
@@ -434,7 +433,6 @@ footer a {
 }
 
 /*CALENEDAR*/
-/* CSS for Event Calendar */
 .app {
   position: fixed;
   top: 70%;
@@ -480,6 +478,7 @@ abbr[title] {
   background: #f8f8fa;
   color: #f0872d;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 
@@ -496,4 +495,5 @@ abbr[title] {
   border-radius: 6px;
   font-weight: bold;
   color: #f0872d;
+  cursor: pointer;
 }

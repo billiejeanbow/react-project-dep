@@ -6,9 +6,9 @@ const NavBar = () => {
       <div className="nav-icon">&#x1F3C0;</div>
      
       <ul>
-        <li>
+        {/* <li>
           <NavLink to="/home">Home</NavLink>
-        </li>
+        </li> */}
         <li>
           <NavLink to="/players">Player Search</NavLink>
         </li>
